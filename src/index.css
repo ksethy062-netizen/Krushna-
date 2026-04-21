@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", sans-serif;
+  
+  --color-brand-primary: #1E3A8A;
+  --color-brand-secondary: #3B82F6;
+  --color-brand-accent: #059669;
+  --color-brand-surface: #F3F4F6;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-slate-50 text-slate-800 transition-colors duration-300;
+  }
+}
+
+.dark body {
+  @apply bg-[#0F172A] text-gray-100;
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+}
+
+.phone-container {
+  @apply max-w-md mx-auto min-h-screen bg-white dark:bg-slate-900 shadow-2xl relative overflow-hidden;
+}
